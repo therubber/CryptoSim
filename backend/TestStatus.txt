@@ -1,0 +1,10 @@
+{
+  status: {
+    timestamp: 'test-timestamp',
+    error_code: 1,
+    error_message: 'test-error-message',
+    elapsed: 1,
+    credit_count: 1,
+  notice: 'test-notice'
+  }
+}
