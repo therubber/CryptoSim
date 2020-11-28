@@ -15,8 +15,9 @@ public class Coin {
     private BigInteger nummarketpairs;
     private String dateadded;
     private List<String> tags;
-    private BigDecimal totalsupply;
+    private BigDecimal maxsupply;
     private BigDecimal circulatingsupply;
+    private BigDecimal totalsupply;
     private Object platform;
     private BigInteger cmcrank;
     private String lastupdated;
@@ -38,11 +39,11 @@ public class Coin {
         return slug;
     }
 
-    public BigInteger getNummarketpairs() {
+    public BigInteger getMarketPairCount() {
         return nummarketpairs;
     }
 
-    public String getDateadded() {
+    public String getDateAdded() {
         return dateadded;
     }
 
@@ -50,19 +51,23 @@ public class Coin {
         return tags;
     }
 
-    public BigDecimal getTotalsupply() {
-        return totalsupply;
+    public BigDecimal getMaxSupply() {
+        return maxsupply;
     }
 
-    public BigDecimal getCirculatingsupply() {
+    public BigDecimal getCirculatingSupply() {
         return circulatingsupply;
+    }
+
+    public BigDecimal getTotalSupply() {
+        return totalsupply;
     }
 
     public Object getPlatform() {
         return platform;
     }
 
-    public BigInteger getCmcrank() {
+    public BigInteger getCmcRank() {
         return cmcrank;
     }
 

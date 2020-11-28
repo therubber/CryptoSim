@@ -28,7 +28,7 @@ public class CurrencyQuote {
         return usd.percentchange7d;
     }
 
-    public BigDecimal getMarketcap() {
+    public BigDecimal getMarketCap() {
         return usd.marketcap;
     }
 

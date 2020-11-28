@@ -1,0 +1,11 @@
+{
+  usd: {
+    price: 17118.796896973243,
+    volume24h: 38783009614.132904,
+    percentchange1h: 0.71789048,
+    percentchange24h: -0.27879593,
+    percentchange7d: -7.81548197,
+    marketcap: 317657353872.8617,
+    lastupdated: '2020-11-27T23:49:02.000Z'
+  }
+}
