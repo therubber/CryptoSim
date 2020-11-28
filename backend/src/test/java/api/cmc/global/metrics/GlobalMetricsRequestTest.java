@@ -1,11 +1,10 @@
 package api.cmc.global.metrics;
 
+import api.cmc.dao.GlobalMetricsDao;
 import api.cmc.factories.GlobalMetricsFactory;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
-import api.cmc.global.metrics.GlobalMetricsDataQuote;
-import api.cmc.global.metrics.GlobalMetricsData;
-import api.cmc.global.metrics.GlobalMetricsRequest;
+import api.cmc.request.GlobalMetricsRequest;
 import api.Status;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -27,19 +26,19 @@ class GlobalMetricsRequestTest {
     static void setUp() throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new FileReader("TestJsonElementAsText.txt"));
 
-        String line = "";
+        String line;
         StringBuilder stringBuilder = new StringBuilder();
 
         while ((line = bufferedReader.readLine()) != null) {
             stringBuilder.append(line);
         }
 
-        String formattedString = formatString(stringBuilder.toString());
+        new GlobalMetricsDao();
+        String formattedString = GlobalMetricsDao.formatString(stringBuilder.toString());
 
         JsonElement globalMetricsJsonElement = JsonParser.parseString(formattedString);
 
         globalMetricsRequest = new GlobalMetricsFactory().globalMetricsFromJsonElement(globalMetricsJsonElement);
-        System.out.println(globalMetricsRequest);
     }
 
     @Test
@@ -91,7 +90,7 @@ class GlobalMetricsRequestTest {
 
     @Nested
     @DisplayName("sets correct data values")
-    class GlobalMetricsDataValues {
+    class GlobalMetricsRequestValues {
 
         private final GlobalMetricsData globalMetricsData = globalMetricsRequest.getData();
 
@@ -231,12 +230,5 @@ class GlobalMetricsRequestTest {
                 assertEquals("2020-11-24T21:10:18.000Z", globalMetricsDataQuote.getLastUpdated());
             }
         }
-    }
-
-    private static String formatString(String input) {
-        return input.replace("_", "")
-                .replace("data", "globalMetricsData")
-                .replace("quote", "globalMetricsDataQuote")
-                .replace("USD", "globalMetricsDataQuoteUsdContainer");
     }
 }

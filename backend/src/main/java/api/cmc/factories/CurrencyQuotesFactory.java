@@ -1,6 +1,6 @@
 package api.cmc.factories;
 
-import api.cmc.cryptocurrency.quotes.CurrencyQuotesRequest;
+import api.cmc.request.CurrencyQuotesRequest;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 

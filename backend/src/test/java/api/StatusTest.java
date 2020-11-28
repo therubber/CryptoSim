@@ -1,6 +1,6 @@
 package api;
 
-import api.cmc.cryptocurrency.quotes.CurrencyQuotesRequest;
+import api.cmc.request.CurrencyQuotesRequest;
 import api.cmc.factories.CurrencyQuotesFactory;
 import com.google.gson.JsonParser;
 import org.junit.jupiter.api.BeforeEach;
@@ -21,7 +21,7 @@ class StatusTest {
     void setUp() throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new FileReader("TestStatus.txt"));
         StringBuilder stringBuilder = new StringBuilder();
-        String line = "";
+        String line;
 
         while ((line = bufferedReader.readLine()) != null) {
             stringBuilder.append(line);

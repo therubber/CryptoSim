@@ -5,7 +5,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import scriptrunner.Scriptrunner;
 import api.cmc.factories.GlobalMetricsFactory;
-import api.cmc.global.metrics.GlobalMetricsRequest;
+import api.cmc.request.GlobalMetricsRequest;
 
 public class GlobalMetricsDao extends Scriptrunner {
 
@@ -20,11 +20,14 @@ public class GlobalMetricsDao extends Scriptrunner {
     }
 
     public JsonElement fetch() {
-        String result = run(GLOBAL_METRICS_SCRIPT)
+        String result = formatString(run(GLOBAL_METRICS_SCRIPT));
+        return JsonParser.parseString(result);
+    }
+
+    public static String formatString(String input) {
+        return input.replace("_", "")
                 .replace("data", "globalMetricsData")
                 .replace("quote", "globalMetricsDataQuote")
                 .replace("USD", "globalMetricsDataQuoteUsdContainer");
-        System.out.println(result);
-        return JsonParser.parseString(result);
     }
 }

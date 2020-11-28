@@ -1,7 +1,7 @@
-package api.cmc.global.metrics;
+package api.cmc.request;
 
 import api.Status;
-
+import api.cmc.global.metrics.GlobalMetricsData;
 /**
  * Data Structure for cmc global metrics
  */
@@ -18,5 +18,13 @@ public class GlobalMetricsRequest {
 
     public GlobalMetricsData getData() {
         return globalMetricsData;
+    }
+
+    @Override
+    public String toString() {
+        return "GlobalMetricsRequest{" +
+                "status=" + status +
+                ", globalMetricsData=" + globalMetricsData +
+                '}';
     }
 }

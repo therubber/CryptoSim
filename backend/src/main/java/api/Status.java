@@ -41,4 +41,16 @@ public class Status {
         }
         return notice;
     }
+
+    @Override
+    public String toString() {
+        return "Status{" +
+                "timestamp='" + timestamp + '\'' +
+                ", errorcode=" + errorcode +
+                ", errormessage='" + errormessage + '\'' +
+                ", elapsed=" + elapsed +
+                ", creditcount=" + creditcount +
+                ", notice='" + notice + '\'' +
+                '}';
+    }
 }

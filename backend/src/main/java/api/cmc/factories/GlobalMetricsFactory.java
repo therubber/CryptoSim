@@ -1,6 +1,6 @@
 package api.cmc.factories;
 
-import api.cmc.global.metrics.GlobalMetricsRequest;
+import api.cmc.request.GlobalMetricsRequest;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 

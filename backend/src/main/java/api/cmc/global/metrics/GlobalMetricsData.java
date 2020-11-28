@@ -108,4 +108,30 @@ public class GlobalMetricsData {
     public String getLastUpdated() {
         return lastupdated;
     }
+
+    @Override
+    public String toString() {
+        return "GlobalMetricsData{" +
+                "activecryptocurrencies=" + activecryptocurrencies +
+                ", totalcryptocurrencies=" + totalcryptocurrencies +
+                ", activemarketpairs=" + activemarketpairs +
+                ", activeexchanges=" + activeexchanges +
+                ", totalexchanges=" + totalexchanges +
+                ", ethdominance=" + ethdominance +
+                ", btcdominance=" + btcdominance +
+                ", defivolume24h=" + defivolume24h +
+                ", defivolume24hreported=" + defivolume24hreported +
+                ", defimarketcap=" + defimarketcap +
+                ", defi24hpercentagechange=" + defi24hpercentagechange +
+                ", stablecoinvolume24h=" + stablecoinvolume24h +
+                ", stablecoinvolume24hreported=" + stablecoinvolume24hreported +
+                ", stablecoinmarketcap=" + stablecoinmarketcap +
+                ", stablecoin24hpercentagechange=" + stablecoin24hpercentagechange +
+                ", derivativesvolume24h=" + derivativesvolume24h +
+                ", derivativesvolume24hreported=" + derivativesvolume24hreported +
+                ", derivatives24hpercentagechange=" + derivatives24hpercentagechange +
+                ", globalMetricsDataQuote=" + globalMetricsDataQuote +
+                ", lastupdated='" + lastupdated + '\'' +
+                '}';
+    }
 }

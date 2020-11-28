@@ -1,37 +1,95 @@
 package api.cmc;
 
+import api.cmc.cryptocurrency.quotes.CurrencyQuote;
+
+import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.List;
 
 public class Coin {
 
-    private final String NAME;
-    private final String TICKER;
-    private final BigInteger MAX_SUPPLY;
-    private Double currentPrice;
+    private BigInteger id;
+    private String name;
+    private String symbol;
+    private String slug;
+    private BigInteger nummarketpairs;
+    private String dateadded;
+    private List<String> tags;
+    private BigDecimal totalsupply;
+    private BigDecimal circulatingsupply;
+    private Object platform;
+    private BigInteger cmcrank;
+    private String lastupdated;
+    private CurrencyQuote currencyQuote;
 
-    public Coin(String name, String ticker, BigInteger maxSupply) {
-        this.NAME = name;
-        this.TICKER = ticker;
-        this.MAX_SUPPLY = maxSupply;
+    public BigInteger getId() {
+        return id;
     }
 
     public String getName() {
-        return NAME;
+        return name;
     }
 
-    public String getTicker() {
-        return TICKER;
+    public String getSymbol() {
+        return symbol;
     }
 
-    public BigInteger getMaxSupply() {
-        return MAX_SUPPLY;
+    public String getSlug() {
+        return slug;
     }
 
-    public void setCurrentPrice(Double currentPrice) {
-        this.currentPrice = currentPrice;
+    public BigInteger getNummarketpairs() {
+        return nummarketpairs;
     }
 
-    public Double getCurrentPrice() {
-        return currentPrice;
+    public String getDateadded() {
+        return dateadded;
+    }
+
+    public List<String> getTags() {
+        return tags;
+    }
+
+    public BigDecimal getTotalsupply() {
+        return totalsupply;
+    }
+
+    public BigDecimal getCirculatingsupply() {
+        return circulatingsupply;
+    }
+
+    public Object getPlatform() {
+        return platform;
+    }
+
+    public BigInteger getCmcrank() {
+        return cmcrank;
+    }
+
+    public String getLastupdated() {
+        return lastupdated;
+    }
+
+    public CurrencyQuote getCurrencyQuote() {
+        return currencyQuote;
+    }
+
+    @Override
+    public String toString() {
+        return "Coin{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", symbol='" + symbol + '\'' +
+                ", slug='" + slug + '\'' +
+                ", nummarketpairs=" + nummarketpairs +
+                ", dateadded='" + dateadded + '\'' +
+                ", tags=" + tags +
+                ", totalsupply=" + totalsupply +
+                ", circulatingsupply=" + circulatingsupply +
+                ", platform=" + platform +
+                ", cmcrank=" + cmcrank +
+                ", lastupdated='" + lastupdated + '\'' +
+                ", currencyQuote=" + currencyQuote +
+                '}';
     }
 }
