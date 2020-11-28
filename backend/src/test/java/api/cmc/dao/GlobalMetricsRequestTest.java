@@ -1,7 +1,9 @@
-package api.cmc.global.metrics;
+package api.cmc.dao;
 
 import api.cmc.dao.GlobalMetricsDao;
 import api.cmc.factories.GlobalMetricsFactory;
+import api.cmc.global.metrics.GlobalMetricsData;
+import api.cmc.global.metrics.GlobalMetricsDataQuote;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 import api.cmc.request.GlobalMetricsRequest;
@@ -33,7 +35,6 @@ class GlobalMetricsRequestTest {
             stringBuilder.append(line);
         }
 
-        new GlobalMetricsDao();
         String formattedString = GlobalMetricsDao.formatString(stringBuilder.toString());
 
         JsonElement globalMetricsJsonElement = JsonParser.parseString(formattedString);

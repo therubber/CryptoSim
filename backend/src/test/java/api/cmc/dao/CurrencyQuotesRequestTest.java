@@ -1,9 +1,8 @@
-package api.cmc.cryptocurrency.quotes;
+package api.cmc.dao;
 
 import api.Status;
 import api.cmc.Coin;
 import api.cmc.request.CurrencyQuotesRequest;
-import api.cmc.dao.CurrencyQuotesDao;
 import api.cmc.factories.CurrencyQuotesFactory;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;

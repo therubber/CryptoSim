@@ -109,10 +109,34 @@ public class GlobalMetricsData {
         return lastupdated;
     }
 
+    public BigDecimal getTotalMarketCap() {
+        return globalMetricsDataQuote.getTotalMarketCap();
+    }
+
+    public BigDecimal getTotalVolume24h() {
+        return globalMetricsDataQuote.getTotalVolume24h();
+    }
+
+    public BigDecimal getTotalVolume24hReported() {
+        return globalMetricsDataQuote.getTotalVolume24hReported();
+    }
+
+    public BigDecimal getAltcoinVolume24h() {
+        return globalMetricsDataQuote.getAltcoinVolume24h();
+    }
+
+    public BigDecimal getAltcoinVolume24hReported() {
+        return globalMetricsDataQuote.getAltcoinVolume24hReported();
+    }
+
+    public BigDecimal getAltcoinMarketCap() {
+        return globalMetricsDataQuote.getAltcoinMarketCap();
+    }
+
     @Override
     public String toString() {
         return "GlobalMetricsData{" +
-                "activecryptocurrencies=" + activecryptocurrencies +
+                "Active Cryptocurrencies =" + activecryptocurrencies +
                 ", totalcryptocurrencies=" + totalcryptocurrencies +
                 ", activemarketpairs=" + activemarketpairs +
                 ", activeexchanges=" + activeexchanges +
